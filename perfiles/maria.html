@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Maria Blanco</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <style>
+
+
+        /* Estilos generales */
+                body {
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #fafafa;
+                    color: #000000;
+                }
+
+
+
+        header {
+        background-color: #e9e8eb;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        }
+
+        .menu {
+        height: 55px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba(7, 7, 163, 0.852);
+        padding: 10px 20px;
+        color: white;
+        border-radius: 60px;
+        }
+
+        .logo {
+        align-items: center;
+        margin: 0;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        }
+
+        .logo img {
+        width: 400px;
+        margin: 0;
+        }
+
+        nav {
+        display: flex;
+        flex-wrap: wrap; /* Permite que el nav se ajuste en pantallas pequeñas */
+        align-items: left;
+        justify-content: space-between;
+        padding: 0 20px;
+        }
+
+        nav ul {
+        display: flex;
+        padding: 0 20px;
+        align-items: flex-start;
+        justify-content: space-between;
+        }
+
+        nav ul li {
+        margin-left: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 150%;
+        }
+
+        nav ul li a {
+        color: white;
+        text-decoration: none;
+        }
+
+        ul li a:hover {
+        text-decoration: underline;
+        border-radius: 10%;
+        background-color: rgb(3, 3, 42);
+        }
+
+        ul.submenu {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 40%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: #c30808;
+        display: none;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+        width: 250px;
+        }
+
+        ul.menu li {
+        position: relative;
+        display: flex;
+        }
+
+        ul.menu li:hover .submenu {
+        display: block;
+        }
+
+        ul.submenu li a {
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+
+        }
+
+        div.titulo h1 {
+        display: flex;
+        }
+
+        /* Media Queries para Responsive Design */
+        @media (max-width: 1000px) {
+        nav {
+            flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+            align-items: flex-start; /* Alinear a la izquierda */
+        }
+
+        nav ul {
+            flex-direction: column; /* Apilar los elementos de la lista */
+        }
+
+        nav ul li {
+            margin-left: 0; /* Eliminar margen lateral */
+            margin-bottom: 10px; /* Añadir espacio entre elementos */
+        }
+
+        .logo img {
+            width: 250px; /* Ajustar el tamaño de la imagen */
+        }
+
+        nav ul li a {
+            font-size: 120%; /* Ajustar el tamaño de fuente */
+        }
+        }
+        /* Media Queries para Responsive Design */
+        @media (max-width: 768px) {
+        nav {
+            flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+            align-items: flex-start; /* Alinear a la izquierda */
+        }
+        
+        nav ul {
+            flex-direction: column; /* Apilar los elementos de la lista */
+        }
+        
+        nav ul li {
+            margin-left: 0; /* Eliminar margen lateral */
+            margin-bottom: 10px; /* Añadir espacio entre elementos */
+        }
+
+        .logo img {
+            width: 150px; /* Ajustar el tamaño de la imagen */
+        }
+
+        nav ul li a {
+            font-size: 120%; /* Ajustar el tamaño de fuente */
+        }
+        }
+
+        @media (max-width: 480px) {
+        nav ul li {
+            font-size: 100%; /* Más pequeño en pantallas muy pequeñas */
+        }
+
+        nav ul li a {
+            padding: 8px 10px; /* Reducir el padding */
+        }
+        }
+
+        div{
+            display: block;
+            margin:0 auto;
+        }
+        .Contenido {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            margin-top: 20px;
+            padding: 50px;
+            max-width: 100000px;
+            
+        }
+
+        .Contenido img {
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .perfiles{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align:justify;
+            margin-top: -90px;
+            padding: 80px;
+            max-width: 10000px;
+        }
+        .perfiles ul{
+            padding: 20px;
+            max-width: 10000px;
+            text-align: left;
+
+            
+        }
+
+
+
+        /* Centrar el footer */
+        footer {
+            background-color: #fc5330;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 0.5em 0;
+            text-decoration: none;
+        }
+        footer a{
+            text-decoration: none;
+            color: hsl(0, 100%, 99%);
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+            <img src="./logo_mym.png" alt="Logo de la empresa">
+            </div>
+            <div class="menu-navegacion">
+                <nav>      
+                    <ul class="menu">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../nav/quienessomos.html">Quiénes Somos</a></li>
+                        <li class="dropdown">
+                            <a href="#perfiles">   Perfiles Profesionales  </a>
+                            <ul class="submenu">
+                                <li><a href="./marlon.html">Lider de proyecto</a></li><br>
+                                <li><a href="./isabel.html">Desarrollador FrontEnd</a></li><br>
+                                <li><a href="./Kevin.html">Desarrollador BackEnd</a></li><br>
+                                <li><a href="./belsi.html">Desarrollador BackEnd</a></li><br>
+                                <li><a href="./maria.html">Tester</a></li><br>
+                            </ul>
+                        </li>
+                        <li><a href="../nav/contacto.html">Contáctenos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+        </header>
+
+
+        <div>
+            <section class="Contenido">
+                <h2>MARIA BLANCO</h2>
+                <br>
+                    <img src="./maria.jpg" alt="Foto de Perfil" width="200" height="200">
+                <br>
+                    <p>Tester especializado en páginas web estáticas, mis funciones clave incluyen revisar la calidad del código, realizar pruebas de funcionalidad y rendimiento, y detectar errores. Además, me enfoco en asegurar la accesibilidad de los sitios y colaborar con el equipo para implementar mejoras, todo con el objetivo de garantizar la calidad y satisfacción del cliente en cada proyecto.</p>
+            </section>
+                
+            <section class="perfiles">
+                    <h3>Responsabilidad</h3>
+                    <br>
+                    <p>Garantizar que las páginas web estáticas en HTML y CSS cumplan con los más altos estándares de calidad, rendimiento y consistencia visual. Así mismo asegurar que las soluciones satisfagan las necesidades de los clientes, contribuyendo a superar sus expectativas y fortalecer relaciones de confianza a largo plazo.</p>
+            <br>
+                    <h3>Habilidades y Competencias</h3>
+                    <ul>
+                    <li>Atención al detalle: Imprescindible para detectar errores pequeños pero importantes que puedan afectar la calidad del sitio.</li>
+                    <li>Capacidad analítica: Para entender la causa raíz de los problemas y proponer soluciones efectivas.</li>
+                    <li>Trabajo en equipo: Colaboración fluida con desarrolladores, diseñadores y otros miembros del equipo.</li>
+                    <li>Adaptabilidad y proactividad: Capacidad para adaptarse a nuevos entornos y herramientas, y para proponer mejoras continuas.</li>
+                    </ul>
+            </section>      
+        </div>
+                    
+            
+            
+                <!-- Pie de página  -->
+        <footer>
+            <h3>Nuestro Equipo Profesional Se Compromete A Orientarte Y Asesorarte.</h3>
+                <p><a href="https://wa.me/+57 300 444 9712">Contacto: +57 300 444 9712</a>
+                <p><a href="mailto:mblancostudent@useelingles.edu.co">Email: mblancostudent@useelingles.edu.co</a>
+                <p>© 2024 Motore&Bombas. Todos los derechos reservados.</p>
+            </footer>
+            
+    </body>
+</html>

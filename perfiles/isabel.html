@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Isabel Cristina Amaya Ibañez</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* header {
+            background-color: #1ef0ff;
+            color: rgb(180, 16, 169);
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+        }
+
+        header img {
+            max-height: 80px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav {
+            background-color: #f48ef6;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            color: #3bff52;
+        } */
+        body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e9e8eb;
+}
+
+header {
+background-color: #e9e8eb;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+
+
+.menu {
+height: 55px;
+position: relative;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: space-between;
+background-color: rgba(7, 7, 163, 0.852);
+padding: 10px 20px;
+color: white;
+border-radius: 60px;
+}
+
+.logo {
+  align-items: center;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 400px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap; /* Permite que el nav se ajuste en pantallas pequeñas */
+  align-items: left;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  padding: 0 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 150%;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  }
+
+ul li a:hover {
+  text-decoration: underline;
+  border-radius: 10%;
+  background-color: rgb(3, 3, 42);
+}
+
+ul.submenu {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #c30808;
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  width: 250px;
+}
+
+ul.menu li {
+  position: relative;
+  display: flex;
+}
+
+ul.menu li:hover .submenu {
+  display: block;
+}
+
+ul.submenu li a {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+div.titulo h1 {
+  display: flex;
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 1000px) {
+nav {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: flex-start; /* Alinear a la izquierda */
+}
+
+nav ul {
+    flex-direction: column; /* Apilar los elementos de la lista */
+}
+
+nav ul li {
+    margin-left: 0; /* Eliminar margen lateral */
+    margin-bottom: 10px; /* Añadir espacio entre elementos */
+}
+
+.logo img {
+    width: 250px; /* Ajustar el tamaño de la imagen */
+}
+
+nav ul li a {
+    font-size: 120%; /* Ajustar el tamaño de fuente */
+}
+}
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      align-items: flex-start; /* Alinear a la izquierda */
+  }
+  
+  nav ul {
+      flex-direction: column; /* Apilar los elementos de la lista */
+  }
+  
+  nav ul li {
+      margin-left: 0; /* Eliminar margen lateral */
+      margin-bottom: 10px; /* Añadir espacio entre elementos */
+  }
+
+  .logo img {
+      width: 150px; /* Ajustar el tamaño de la imagen */
+  }
+
+  nav ul li a {
+      font-size: 120%; /* Ajustar el tamaño de fuente */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li {
+      font-size: 100%; /* Más pequeño en pantallas muy pequeñas */
+  }
+
+  nav ul li a {
+      padding: 8px 10px; /* Reducir el padding */
+  }
+}
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #000000;
+        }
+
+        /* Estilo del encabezado */
+        
+        /* Estilo de la sección de perfil */
+        .seccion_perfil {
+            background-color: white;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .seccion_perfil img {
+            border-radius: 50%;
+            width: 200px;
+            height: 250px;
+            border: 4px solid rgb(67, 12, 178);
+        }
+
+        .seccion_perfil h2 {
+            margin-top: 1em;
+            font-size: 2em;
+            color: rgb(67, 12, 178);
+        }
+
+        .seccion_perfil p {
+            font-size: 1.1em;
+            line-height: 1;
+            margin: 1em auto;
+            width: 80%;
+        }
+
+        /* Sección de habilidades */
+        .habilidades {
+            background-color: #1f1f56;
+            color: white;
+            padding: 3em 0;
+        }
+
+        .habilidades h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 1.5em;
+        }
+
+        .lista_habilidades {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            flex-wrap: wrap;
+        }
+
+        .lista_habilidades div {
+            background-color: rgb(196, 15, 15);
+            padding: 1.5em;
+            border-radius: 10px;
+            width: 180px;
+            text-align: center;
+        }
+
+        .lista_habilidades div h3 {
+            margin: 0;
+            font-size: 1.3em;
+            color: #fff;
+        }
+
+        .lista_habilidades div p {
+            margin-top: 0.5em;
+            font-size: 1em;
+        }
+
+        /* Sección de contacto */
+        .seccion_contacto {
+            padding: 3em;
+            text-align: center;
+        }
+
+        .seccion_contacto h2 {
+            font-size: 2em;
+            margin-bottom: 1.5em;
+        }
+
+        .seccion_contacto a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #19176a;
+            border: 2px solid rgb(253, 249, 251);
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .seccion_contacto a:hover {
+            background-color: rgb(196, 15, 15);
+            color: #19176a;
+        }
+
+        /* Pie de página con redes sociales */
+        footer {
+            background-color: #19176a;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        footer .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+
+        footer .social-links a {
+            color: white;
+            font-size: 1em;
+            text-decoration: none;
+        }
+
+        footer p {
+            margin-top: 1em;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#profile">Sobre mí</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    Encabezado con logo y nombre de la empresa 
+    <header>
+        <h1>Isabel Cristina Amaya Ibáñez</h1>
+    </header>  -->
+
+    <header>
+
+        <div class="logo">
+            <img src="./logo_mym.png" alt="Logo de la empresa">
+        </div>
+        <div class="menu-navegacion">
+            <nav>      
+                <ul class="menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../nav/quienessomos.html">Quiénes Somos</a></li>
+                    <li class="dropdown">
+                        <a href="#perfiles">   Perfiles Profesionales  </a>
+                        <ul class="submenu">
+                            <li><a href="./marlon.html">Lider de proyecto</a></li><br>
+                            <li><a href="./isabel.html">Desarrollador FrontEnd</a></li><br>
+                            <li><a href="./Kevin.html">Desarrollador BackEnd</a></li><br>
+                            <li><a href="./belsi.html">Desarrollador BackEnd</a></li><br>
+                            <li><a href="./maria.html">Tester</a></li><br>
+                        </ul>
+                    </li>
+                    <li><a href="../nav/contacto.html">Contáctenos</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+
+</header>
+
+     <!-- Encabezado con un fondo degradado -->
+     
+
+    <!-- Sección del perfil profesional -->
+    <section class="seccion_perfil">
+        <div>
+            <h1>Isabel Cristina Amaya Ibáñez</h1>
+            <p>Diseñadora de Software</p>
+         </div>
+        <img src="./isabel.jpeg" alt="Foto de Isabel">
+        <h2>Perfil profesional</h2>
+        <p>Soy diseñadora de páginas estáticas de HTML Y CSS, mi principal función es crear la estructura y la presentación visual de sitios web y aplicaciones digitales. </p>
+        
+        <p>Soy profesional en Trabajo social, especialista en proyectos de desarrollo, con experiencia laboral en el área de la salud y la educación. El aprendizaje siempre ha sido una de mis prioridades, lo que motivó mi decisión de hacer una pausa profesional para invertir ese tiempo en completar mi conocimiento con programación básica, y esperando poder avanzar más en ésta área; decisión que no solo me permitirá mejorar mis conocimientos, sino que a su vez un crecimiento personal necesario para poder asumir objetivos más ambiciosos. </p>
+    </section>
+
+    <!-- Sección de habilidades -->
+    <section class="habilidades">
+        <h2>Habilidades</h2>
+        <div class="lista_habilidades">
+            <div>
+                <p>Diseño, desarrollo, testing y colaboración para crear sitios web efectivos y funcionales.</p>
+               
+            </div>
+            <div>
+                <p>Creación de estructuras de sitios web con HTML.</p>
+                
+            </div>
+            <div>
+                <p>Uso de herramientas de procesamiento CSS.</p>
+                
+            </div>
+          
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="seccion_contacto">
+        <div class="botones_redes_sociales">
+            <a href="https://www.facebook.com/Cristinaamayaibanez" target=" href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css"><i class="fi fi-brands-facebook"></i>
+           
+            <a href="https://www.instagram.com/isabelcristina_ibanez/profilecard/?igsh=MWY4YzRuczUyZnZzNQ==" target="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css"><i class="fi fi-brands-instagram"></i></a>
+
+            <a href="https://wa.me/+573028373593" target="href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>"><i class="fi fi-brands-whatsapp"></i>
+
+           
+            <a href="mailto:cristinaamaya1002@gmail.com"><i class="fi fi-brands-google"></i></a>
+        
+        
+        </div>
+    </section>
+
+    <!-- Pie de página con enlaces a redes sociales -->
+    <footer>
+       <p>Contacto: +57 302 837 3593</p>
+        <p>Email: cristinaamaya1002@gmail.com</p>
+        <p>&copy; 2024 Isabel Cristina Amaya Ibáñez. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

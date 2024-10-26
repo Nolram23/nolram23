@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Marlon Miranda</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #000000;
+        }
+
+        header {
+background-color: #e9e8eb;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.menu {
+height: 55px;
+position: relative;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: space-between;
+background-color: rgba(7, 7, 163, 0.852);
+padding: 10px 20px;
+color: white;
+border-radius: 60px;
+}
+
+.logo {
+  align-items: center;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 400px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap; /* Permite que el nav se ajuste en pantallas pequeñas */
+  align-items: left;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  padding: 0 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 150%;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  }
+
+ul li a:hover {
+  text-decoration: underline;
+  border-radius: 10%;
+  background-color: rgb(3, 3, 42);
+}
+
+ul.submenu {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #c30808;
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  width: 250px;
+}
+
+ul.menu li {
+  position: relative;
+  display: flex;
+}
+
+ul.menu li:hover .submenu {
+  display: block;
+}
+
+ul.submenu li a {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+div.titulo h1 {
+  display: flex;
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 1000px) {
+nav {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: flex-start; /* Alinear a la izquierda */
+}
+
+nav ul {
+    flex-direction: column; /* Apilar los elementos de la lista */
+}
+
+nav ul li {
+    margin-left: 0; /* Eliminar margen lateral */
+    margin-bottom: 10px; /* Añadir espacio entre elementos */
+}
+
+.logo img {
+    width: 250px; /* Ajustar el tamaño de la imagen */
+}
+
+nav ul li a {
+    font-size: 120%; /* Ajustar el tamaño de fuente */
+}
+}
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      align-items: flex-start; /* Alinear a la izquierda */
+  }
+  
+  nav ul {
+      flex-direction: column; /* Apilar los elementos de la lista */
+  }
+  
+  nav ul li {
+      margin-left: 0; /* Eliminar margen lateral */
+      margin-bottom: 10px; /* Añadir espacio entre elementos */
+  }
+
+  .logo img {
+      width: 150px; /* Ajustar el tamaño de la imagen */
+  }
+
+  nav ul li a {
+      font-size: 120%; /* Ajustar el tamaño de fuente */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li {
+      font-size: 100%; /* Más pequeño en pantallas muy pequeñas */
+  }
+
+  nav ul li a {
+      padding: 8px 10px; /* Reducir el padding */
+  }
+}
+
+        /* Estilo del encabezado */
+        /* Estilo de la sección de perfil */
+        .seccion_perfil {
+            background-color: white;
+            padding: 3em;
+            text-align: center;
+        }
+
+        .seccion_perfil img {
+            border-radius: 50%;
+            width: 190px;
+            height: 190px;
+            border: 4px solid rgb(67, 12, 178);
+        }
+
+        .seccion_perfil h2 {
+            margin-top: 1em;
+            font-size: 2em;
+            color: rgb(67, 12, 178);
+        }
+
+        .seccion_perfil p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 1em auto;
+            width: 80%;
+        }
+
+        /* Sección de habilidades */
+        .habilidades {
+            background-color: #1f1f56;
+            color: white;
+            padding: 3em 0;
+        }
+
+        .habilidades h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 1.5em;
+        }
+
+        .lista_habilidades {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            flex-wrap: wrap;
+        }
+
+        .lista_habilidades div {
+            background-color: rgb(196, 15, 15);
+            padding: 1.5em;
+            border-radius: 10px;
+            width: 180px;
+            text-align: center;
+        }
+
+        .lista_habilidades div h3 {
+            margin: 0;
+            font-size: 1.3em;
+            color: #fff;
+        }
+
+        .lista_habilidades div p {
+            margin-top: 0.5em;
+            font-size: 1em;
+        }
+
+        /* Sección de contacto */
+        .seccion_contacto {
+            padding: 3em;
+            text-align: center;
+        }
+
+        .seccion_contacto h2 {
+            font-size: 2em;
+            margin-bottom: 1.5em;
+        }
+
+        .seccion_contacto a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #f06;
+            border: 2px solid #f06;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .seccion_contacto a:hover {
+            background-color: #f06;
+            color: white;
+        }
+
+        /* Pie de página con redes sociales */
+        .footer {
+    background-color: #282c34; /* Color de fondo oscuro */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre iconos */
+}
+
+.social-icon img {
+    width: 40px; /* Tamaño de los iconos */
+    height: 40px;
+    transition: transform 0.3s, filter 0.3s; /* Transición para efectos */
+}
+
+.social-icon:hover img {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el ratón */
+    filter: brightness(1.2); /* Aumentar el brillo al pasar el ratón */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    opacity: 0.7; /* Menos opacidad */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.2em; /* Ajustar tamaño del texto en pantallas pequeñas */
+    }
+
+    .social-icon img {
+        width: 30px; /* Ajustar tamaño de iconos */
+        height: 30px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="./logo_mym.png" alt="Logo de la empresa">
+        </div>
+        <div class="menu-navegacion">
+            <nav>      
+                <ul class="menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../nav/quienessomos.html">Quiénes Somos</a></li>
+                    <li class="dropdown">
+                        <a href="#perfiles">   Perfiles Profesionales  </a>
+                        <ul class="submenu">
+                            <li><a href="./marlon.html">Lider de proyecto</a></li><br>
+                            <li><a href="./isabel.html">Desarrollador FrontEnd</a></li><br>
+                            <li><a href="./Kevin.html">Desarrollador BackEnd</a></li><br>
+                            <li><a href="./belsi.html">Desarrollador BackEnd</a></li><br>
+                            <li><a href="./maria.html">Tester</a></li><br>
+                        </ul>
+                    </li>
+                    <li><a href="../nav/contacto.html">Contáctenos</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+
+</header>
+
+
+    <!-- Encabezado con un fondo degradado -->
+
+
+    <!-- Sección del perfil profesional -->
+    <section class="seccion_perfil">
+        <div><h1>Marlon Jhesid Miranda Contreras</h1>
+            <p>Ingeniero Electromecanico | desarrollador de software full stack</p>
+        </div>
+        <img src="marlon.jpeg" alt="Foto de Marlon Miranda">
+        <h2>Perfil profesional</h2>
+        <p>Soy un ingeniero electromecánico con más de 10 años de experiencia en roles de liderazgo y gerencia, especializado en el diseño y desarrollo de soluciones técnicas. A lo largo de mi carrera, he demostrado capacidad de liderazgo, resolución de problemas complejos y habilidades de gestión de equipos multidisciplinarios. Actualmente, me encuentro enfocado en la creación de páginas web y desarrollo de software con tecnologías como React, Node.js, y bases de datos, buscando siempre entregar proyectos de alta calidad y eficiencia. <br>
+        Mi pasión por el aprendizaje me ha llevado a evolucionar hacia el desarrollo web, con un enfoque en proyectos ágiles y metodologías colaborativas. Además, mi experiencia docente me permite transmitir conceptos y técnicas de manera efectiva, logrando equipos cohesionados y altamente productivos.
+        </p>
+        
+    </section>
+
+    <!-- Sección de habilidades -->
+    <section class="habilidades">
+        <h2>Habilidades</h2>
+        <div class="lista_habilidades">
+            <div class="skill-box">
+                <h3>Liderazgo de equipos</h3>
+                <p>Experiencia en la dirección de equipos en proyectos técnicos y de desarrollo de software, asegurando que los objetivos se cumplan dentro de los plazos y estándares.</p>
+            </div>
+            <div class="skill-box">
+                <h3>Gestión de proyectos</h3>
+                <p>Capacidad de planificación y organización de proyectos, estableciendo cronogramas, asignando recursos y gestionando riesgos.</p>
+            </div>
+            <div class="skill-box">
+                <h3>Desarrollo web</h3>
+                <p>Manejo de tecnologías front-end (React) y back-end (Node.js), con experiencia en la creación de sistemas modulares y escalables.</p>
+            </div>
+            <div class="skill-box">
+                <h3>Docencia y comunicación</h3>
+                <p>Habilidad para enseñar y guiar equipos, adaptando la enseñanza a las necesidades y estilos de cada individuo.</p>
+            </div>
+            <div class="skill-box">
+                <h3>Resolución de problemas</h3>
+                <p>Enfoque práctico y creativo para la resolución de retos técnicos y operativos.</p>
+            </div>
+            <div class="skill-box">
+                <h3>Adaptabilidad</h3>
+                <p>Facilidad para aprender nuevas tecnologías y adaptarme a entornos cambiantes, con una mentalidad siempre abierta a nuevas ideas.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Pie de página con enlaces a redes sociales -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Conéctame en las redes sociales</h2>
+            <div class="social-icons">
+                <a href="mailto:mym2393@gmail.com" class="social-icon" title="Email">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+                </a>
+                <a href="https://co.linkedin.com/in/marlonmirandadev" target="_blank" class="social-icon" title="LinkedIn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com/nolram23" target="_blank" class="social-icon" title="GitHub">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+                </a>
+                <a href="https://www.notion.so/e41ddcbbac9c4a76802c1b73c6740e2d" target="_blank" class="social-icon" title="Notion">
+                    <img src="https://cdn-icons-png.flaticon.com/512/7470/7470758.png" alt="Notion" />
+                </a>
+                <a href="https://www.facebook.com/NOLRAM2393" target="_blank" class="social-icon" title="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/m4rlon_m/profilecard/?igsh=cmhpYWFnZ3hra3Mz" target="_blank" class="social-icon" title="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+                </a>
+                <a href="https://twitter.com/tu-perfil" target="_blank" class="social-icon" title="Twitter">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+                </a>
+                <a href="https://wa.me/+573168310352" target="_blank" class="social-icon" title="WhatsApp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+                </a>
+                <a href="https://www.tiktok.com/@marlonmiranda2393?_t=8qoyovJ97uH&_r=1" target="_blank" class="social-icon" title="TikTok">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733577.png" alt="TikTok" />
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Marlon Miranda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

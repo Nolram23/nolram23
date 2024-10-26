@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Kevin Camilo Gelvez León</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #000000;
+        }
+
+        header {
+background-color: #e9e8eb;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.menu {
+height: 55px;
+position: relative;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: space-between;
+background-color: rgba(7, 7, 163, 0.852);
+padding: 10px 20px;
+color: white;
+border-radius: 60px;
+}
+
+.logo {
+  align-items: center;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 400px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap; /* Permite que el nav se ajuste en pantallas pequeñas */
+  align-items: left;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  padding: 0 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin-left: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 150%;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  }
+
+ul li a:hover {
+  text-decoration: underline;
+  border-radius: 10%;
+  background-color: rgb(3, 3, 42);
+}
+
+ul.submenu {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #c30808;
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  width: 250px;
+}
+
+ul.menu li {
+  position: relative;
+  display: flex;
+}
+
+ul.menu li:hover .submenu {
+  display: block;
+}
+
+ul.submenu li a {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+div.titulo h1 {
+  display: flex;
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 1000px) {
+nav {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: flex-start; /* Alinear a la izquierda */
+}
+
+nav ul {
+    flex-direction: column; /* Apilar los elementos de la lista */
+}
+
+nav ul li {
+    margin-left: 0; /* Eliminar margen lateral */
+    margin-bottom: 10px; /* Añadir espacio entre elementos */
+}
+
+.logo img {
+    width: 250px; /* Ajustar el tamaño de la imagen */
+}
+
+nav ul li a {
+    font-size: 120%; /* Ajustar el tamaño de fuente */
+}
+}
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      align-items: flex-start; /* Alinear a la izquierda */
+  }
+  
+  nav ul {
+      flex-direction: column; /* Apilar los elementos de la lista */
+  }
+  
+  nav ul li {
+      margin-left: 0; /* Eliminar margen lateral */
+      margin-bottom: 10px; /* Añadir espacio entre elementos */
+  }
+
+  .logo img {
+      width: 150px; /* Ajustar el tamaño de la imagen */
+  }
+
+  nav ul li a {
+      font-size: 120%; /* Ajustar el tamaño de fuente */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li {
+      font-size: 100%; /* Más pequeño en pantallas muy pequeñas */
+  }
+
+  nav ul li a {
+      padding: 8px 10px; /* Reducir el padding */
+  }
+}
+
+
+        /* Estilo de la sección de perfil */
+        .seccion_perfil {
+            background-color: white;
+            padding: 3em;
+            text-align: center;
+        }
+
+        .seccion_perfil img {
+            border-radius: 50%;
+            width: 190px;
+            height: 190px;
+            border: 4px solid rgb(67, 12, 178);
+        }
+
+        .seccion_perfil h2 {
+            margin-top: 1em;
+            font-size: 2em;
+            color: rgb(67, 12, 178);
+        }
+
+        .seccion_perfil p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 1em auto;
+            width: 80%;
+        }
+
+        /* Sección de habilidades */
+        .habilidades {
+            background-color: #1f1f56;
+            color: white;
+            padding: 3em 0;
+        }
+
+        .habilidades h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 1.5em;
+        }
+
+        .lista_habilidades {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            flex-wrap: wrap;
+        }
+
+        .lista_habilidades div {
+            background-color: rgb(196, 15, 15);
+            padding: 1.5em;
+            border-radius: 10px;
+            width: 180px;
+            text-align: center;
+        }
+
+        .lista_habilidades div h3 {
+            margin: 0;
+            font-size: 1.3em;
+            color: #fff;
+        }
+
+        .lista_habilidades div p {
+            margin-top: 0.5em;
+            font-size: 1em;
+        }
+
+        /* Sección de contacto */
+        .seccion_contacto {
+            padding: 3em;
+            text-align: center;
+        }
+
+        .seccion_contacto h2 {
+            font-size: 2em;
+            margin-bottom: 1.5em;
+        }
+
+        .seccion_contacto a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #f06;
+            border: 2px solid #f06;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .seccion_contacto a:hover {
+            background-color: #f06;
+            color: white;
+        }
+
+        /* Pie de página con redes sociales */
+        footer {
+            background-color: #19176a;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        footer .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+
+        footer .social-links a {
+            color: white;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        footer p {
+            margin-top: 1em;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="./logo_mym.png" alt="Logo de la empresa">
+        </div>
+        <div class="menu-navegacion">
+            <nav>      
+                <ul class="menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../nav/quienessomos.html">Quiénes Somos</a></li>
+                    <li class="dropdown">
+                        <a href="#perfiles">   Perfiles Profesionales  </a>
+                        <ul class="submenu">
+                            <li><a href="./marlon.html">Lider de proyecto</a></li><br>
+                            <li><a href="./isabel.html">Desarrollador FrontEnd</a></li><br>
+                            <li><a href="./Kevin.html">Desarrollador BackEnd</a></li><br>
+                            <li><a href="./belsi.html">Desarrollador BackEnd</a></li><br>
+                            <li><a href="./maria.html">Tester</a></li><br>
+                        </ul>
+                    </li>
+                    <li><a href="../nav/contacto.html">Contáctenos</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+
+</header>
+
+
+    <!-- Encabezado con un fondo degradado -->
+
+
+    <!-- Sección del perfil profesional -->
+    <section class="seccion_perfil">
+        <div><h1>Kevin Camilo Gelvez León</h1>
+            <p>Tecnico en Sistemas | Analista y desarrollador de software</p>
+        </div>
+        <img src="kevin.png" alt="Foto de Kevin Gelvez">
+        <h2>Perfil profesional</h2>
+        <p>Joven desarrollador de Páginas Estáticas en HTML con experiencia en la creación y mantenimiento de sitios web eficientes y visualmente atractivos. Experto en HTML y CSS, con un sólido conocimiento en diseño responsivo y optimización para motores de búsqueda (SEO). Hábil en la colaboración con equipos multidisciplinarios para asegurar la implementación precisa de diseños y funcionalidades. Comprometido con la atención al detalle y la resolución rápida de problemas técnicos, siempre buscando mantenerse actualizado con las últimas tendencias y tecnologías en desarrollo web. </p>
+        <h2>Perfil personal</h2>
+        <p>Ademas de mi profesionalismo, cabe aclarar que soy un joven de 18 años que aun sigue estudiando en una interesante institución llamada Sena, en esta me encuentro haciendo un tegnólogo en ADSO el cual me sirve para aprender y pulir habilidades para mejorar mi perfil profesional. soy alguien sencillo, me gusta aprender e interactuar con el entorno tecnologico, tambien me gusta salir a explorar la ciudad en la que vivo descubriendo lugares y personas interesantes con las cuales puedo generar vinculos importantes para mi desarrollo como persona.</p>
+    </section>
+
+    <!-- Sección de habilidades -->
+    <section class="habilidades">
+        <h2>Habilidades</h2>
+        <div class="lista_habilidades">
+            <div>
+                <h3>Redes cableadas</h3>
+                <p>Desarrollo e instalación de redes cableadas</p>
+            </div>
+            <div>
+                <h3>Desarrollo de software</h3>
+                <p>Diseño y desarrollo de paginas y softwares</p>
+            </div>
+            <div>
+                <h3>HTML5</h3>
+                <p>Desarrollo estructurado y semantico</p>
+            </div>
+            <div>
+                <h3>SEO</h3>
+                <p>Optimización para motores de búsqueda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="seccion_contacto">
+        <h2>Contacto</h2>
+        <a href="mailto:Leongelv#####@gmail.com">Envíame un correo</a>
+    </section>
+
+    <!-- Pie de página con enlaces a redes sociales -->
+    <footer>
+        <div class="social-links">
+            <a href="mailto:Leongelv#####@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2024 Kevin Camilo Gelvez León. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
