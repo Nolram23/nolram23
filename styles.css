@@ -190,7 +190,7 @@ nav ul li a {
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: auto;
   overflow: hidden;
 }
@@ -239,7 +239,7 @@ nav ul li a {
       height: auto; /* Mantener la proporción */
       max-height: 150px;
   }
- 
+
 }
 @media (max-width: 768px) {
   .carousel img {
@@ -247,12 +247,20 @@ nav ul li a {
       max-height: 250px;
   }
 }
-@media (max-width: 1400px) {
+@media (max-width: 1000px) {
   .carousel img {
       height: auto; /* Mantener la proporción */
       max-height: 280px;
   }
 }
+@media (max-width: 1600px) {
+  .carousel img {
+      height: auto; /* Mantener la proporción */
+      max-height: 280px;
+  }
+}
+
+
 
 
 .contenido2 {
