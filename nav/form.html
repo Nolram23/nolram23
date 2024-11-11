@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto Mejorado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9f7df;
+            border: 1px solid #a0d468;
+            color: #3c763d;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Formulario de Contacto</h2>
+        <form id="formularioContacto" onsubmit="validarFormulario(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <div id="errorNombre" class="error">El nombre solo debe contener letras.</div>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <div id="errorEmail" class="error">Por favor, ingrese un correo electrónico válido.</div>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            <div id="errorTelefono" class="error">El teléfono debe contener solo números y tener 10 dígitos.</div>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <div id="errorMensaje" class="error">Por favor, ingrese un mensaje.</div>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script>
+        function validarFormulario(event) {
+            event.preventDefault();
+
+            // Obtener valores
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            let esValido = true;
+
+            // Validación del nombre (solo letras)
+            const regexNombre = /^[a-zA-Z\s]+$/;
+            if (!regexNombre.test(nombre)) {
+                document.getElementById('errorNombre').style.display = 'block';
+                esValido = false;
+            } else {
+                document.getElementById('errorNombre').style.display = 'none';
+            }
+
+            // Validación del correo (formato adecuado con @)
+            const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+            if (!regexEmail.test(email)) {
+                document.getElementById('errorEmail').style.display = 'block';
+                esValido = false;
+            } else {
+                document.getElementById('errorEmail').style.display = 'none';
+            }
+
+            // Validación del teléfono (solo números y 10 dígitos)
+            const regexTelefono = /^\d{10}$/;
+            if (!regexTelefono.test(telefono)) {
+                document.getElementById('errorTelefono').style.display = 'block';
+                esValido = false;
+            } else {
+                document.getElementById('errorTelefono').style.display = 'none';
+            }
+
+            // Validación del mensaje (no vacío)
+            if (mensaje.trim() === "") {
+                document.getElementById('errorMensaje').style.display = 'block';
+                esValido = false;
+            } else {
+                document.getElementById('errorMensaje').style.display = 'none';
+            }
+
+            // Si todo es válido, mostrar los datos
+            if (esValido) {
+                const resultado = document.getElementById('resultado');
+                resultado.innerHTML = `
+                    <h3>Datos enviados:</h3>
+                    <p><strong>Nombre:</strong> ${nombre}</p>
+                    <p><strong>Correo electrónico:</strong> ${email}</p>
+                    <p><strong>Teléfono:</strong> ${telefono}</p>
+                    <p><strong>Mensaje:</strong> ${mensaje}</p>
+                `;
+                resultado.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>

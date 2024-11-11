@@ -4,50 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motores & Motobombas</title>
-    <script src="carrusel.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="./scripts/carrusel.js"></script>
+    <script src="./scripts/dark_mode.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
 <header>
-
-        <div class="logo">
-            <img src="./img/logo_mym.png" alt="Logo de la empresa">
-        </div>
-    <div class="menu-navegacion">
+    <div class="wrapper">
         <nav>
-            
-            <ul class="menu">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./nav/quienessomos.html">Quiénes Somos</a></li>
-                <li class="dropdown">
-                    <a href="#perfiles">   Perfiles Profesionales  </a>
-                    <ul class="submenu">
-                        <li><a href="./perfiles/marlon.html">Lider de proyecto</a></li><br>
-                        <li><a href="./perfiles/isabel.html">Desarrollador FrontEnd</a></li><br>
-                        <li><a href="./perfiles/Kevin.html">Desarrollador BackEnd</a></li><br>
-                        <li><a href="./perfiles/belsi.html">Desarrollador BackEnd</a></li><br>
-                        <li><a href="./perfiles/maria.html">Tester</a></li><br>
-                    </ul>
-                </li>
-                <li><a href="./nav/contacto.html">Contáctenos</a></li>
-            </ul>
+            <a class="logo" href="/">
+                <img class="logo-img" src="./img/logo_mym.png" alt="Logo de la empresa">
+            </a>
+            <input type="checkbox" name="" id="toggle">
+            <label for="toggle"><i class="material-icons">menu</i></label>
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./nav/quienessomos.html">Quiénes Somos</a></li>
+                    <li class="dropdown">
+                        <a href="#perfiles">   Perfiles Profesionales  </a>
+                        <ul class="submenu">
+                            <li><a href="./perfiles/marlon.html">Lider de proyecto</a></li><br>
+                            <li><a href="./perfiles/isabel.html">Desarrollador FrontEnd</a></li><br>
+                            <li><a href="./perfiles/Kevin.html">Desarrollador BackEnd</a></li><br>
+                            <li><a href="./perfiles/belsi.html">Desarrollador BackEnd</a></li><br>
+                            <li><a href="./perfiles/maria.html">Tester</a></li><br>
+                        </ul>
+                    </li>
+                    <li><a href="./nav/contacto.html">Contáctenos</a></li>
+                    <li><button onclick="login()" class="login-button">Login</button></li>
+                </ul>
+            </div>
         </nav>
     </div>
-
+    <script>
+        // Función que redirige al otro archivo HTML
+        function login() {
+            window.location.href = "./nav/login.html"; 
+        }
+    </script>
 </header>
 
 
 <!-- Banner Carrusel-->
-
-
-
+    
 <div class="carousel-container">
     <div class="carousel">
         <img src="./img/carrusel/banner_bienvenida.png" alt="Imagen 3">
         <img src="./img/carrusel/barnes_banner.webp" alt="Imagen 1">
         <img src="./img/carrusel/karcher_banner.jpg" alt="Imagen 2">
-        <img src="./img/carrusel/filtros.jpg" alt="Imagen 3">
+        <img src="./img/carrusel/filtros.jpg" alt="Imagen 4">
     </div>
     <button class="btn prev" >&#10094;</button>
     <button class="btn next" >&#10095;</button>
@@ -69,15 +79,42 @@
     </h1>
 </div>
 
-<!-- Contenido de la página -->
 
-<div class="productos">
-    <img src="./img/mezcladora.png" class="productosimg" width="150px" height="150px" />
-    <img src="./img/generador_industrial_2.png" class="productosimg" width="150px" height="150px" />
-    <img src="./img/motor_electrico.png" class="productosimg" width="150px" height="150px" />
-    <img src="./img/hidrolavadorak5p.png" class="productosimg" width="150px" height="150px" />
-    <img src="./img/cortacesped.png" class="productosimg" width="150px" height="150px" />
-</div>
+<!-- Contenido de la página -->
+<section class="productos">
+    <div class="tarjeta-proyecto">
+        <img src="./img/mezcladora.png" class="productosimg"  />
+          <div class="info-hover">
+            <p class="parrafo-tarjeta">Equipos de construcción</p>
+          </div>
+    </div>
+    
+    <div class="tarjeta-proyecto">
+        <img src="./img/generador_industrial_2.png" class="productosimg" />
+         <div class="info-hover">
+            <p class="parrafo-tarjeta">Generadores de energía</p>
+         </div>
+    </div>
+    
+    <div class="tarjeta-proyecto">
+        <img src="./img/motor_electrico.png" class="productosimg" />
+         <div class="info-hover">
+           <p class="parrafo-tarjeta">Motores</p>
+         </div>
+    </div>
+    <div class="tarjeta-proyecto">
+        <img src="./img/hidrolavadorak5p.png" class="productosimg" />
+         <div class="info-hover">
+          <p class="parrafo-tarjeta">Hidrolavadoras</p>
+         </div>
+    </div>
+    <div class="tarjeta-proyecto">
+        <img src="./img/cortacesped.png" class="productosimg" />
+        <div class="info-hover">
+            <p class="parrafo-tarjeta">Equipos agricolas</p>
+        </div>
+    </div>
+    </section>
 
 <!--espacio para realizar el footer-->
 
@@ -89,7 +126,10 @@
                 <li><a href="#">Inicio</a></li>
                 <li><a href="./nav/servicios.html">Servicios</a></li>
                 <li><a href="./nav/contacto.html">Contacto</a></li>
-                <li><a href="./nav/tyc.html">Terminos y Condiciones</a></li>
+                <li><a href="./nav/politicasdeprivacidad.html">Politicas de privacidad</a></li>
+                <li><a href="./nav/descargodereponsabilidades.html">Descargo de responsabilidad</a></li>
+                <li><a href="./nav/copyright.html">Copyright</a></li>
+                <li><a href="./nav/terminosycondiciones.html">Terminos y Condiciones</a></li>
             </ul>
         </div>
         <div class="footer-section">
@@ -113,6 +153,8 @@
         <a>&copy; 2024 Motores y Motobombas. Todos los derechos reservados.</a>
     </div>
 </footer>
+
+<button id="boton-fijo">Cambia el modo de iluminacion</button>
 
 
 </body>

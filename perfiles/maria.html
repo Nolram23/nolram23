@@ -8,21 +8,23 @@
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+        <script src="../scripts/dark_mode.js"></script> 
     <style>
 
 
         /* Estilos generales */
-                body {
-                    font-family: 'Arial', sans-serif;
-                    margin: 0;
-                    padding: 0;
-                    background-color: #fafafa;
-                    color: #000000;
-                }
+        body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
 
-
-        header {
+@layer header {
+    
+    header {
         background-color: #e9e8eb;
         display: flex;
         flex-direction: row;
@@ -180,8 +182,10 @@
             padding: 8px 10px; /* Reducir el padding */
         }
         }
+}
 
-        div{
+@layer contenido {
+            div{
             display: block;
             margin:0 auto;
         }
@@ -218,11 +222,13 @@
 
             
         }
+}
 
 
 
-        /* Centrar el footer */
-        footer {
+@layer footer {
+          /* Centrar el footer */
+          footer {
             background-color: #fc5330;
             color: white;
             text-align: center;
@@ -241,6 +247,43 @@
             text-decoration: none;
             color: hsl(0, 100%, 99%);
         }
+  }
+  @layer dark_mode {
+        #boton-fijo {
+            position: fixed; /* Fija el botón en la pantalla */
+            bottom: 20px;    /* Distancia desde el borde inferior */
+            right: 20px;     /* Distancia desde el borde derecho */
+            background-color: #000000; /* Color de fondo */
+            color: white;    /* Color del texto */
+            padding: 10px 20px; /* Relleno del botón */
+            border-radius: 5px; /* Bordes redondeados */
+            border: none;     /* Sin borde */
+            font-size: 16px;  /* Tamaño del texto */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+            z-index: 1000;   /* Asegura que el botón esté sobre otros elementos */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos de transición */
+            }
+
+        #boton-fijo:hover {
+            background-color: #ffffff; /* Color de fondo cuando se pasa el ratón */
+            color: #000000;
+            transform: scale(1.1); /* Aumenta el tamaño del botón en hover */
+        }
+
+
+
+        /* Modo Oscuro */
+        body.modo-oscuro {
+            background-color: #121212;
+            color: white;
+        }
+
+        header.modo-oscuro, footer.modo-oscuro {
+            background-color: #1e1e1e;
+        }
+        }
+    
         </style>
     </head>
     <body>
@@ -304,6 +347,7 @@
                 <p><a href="mailto:mblancostudent@useelingles.edu.co">Email: mblancostudent@useelingles.edu.co</a>
                 <p>© 2024 Motore&Bombas. Todos los derechos reservados.</p>
             </footer>
+        <button id="boton-fijo">Cambia el modo de iluminacion</button>
             
     </body>
 </html>
