@@ -9,6 +9,8 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <script src="../scripts/dark_mode.js"></script>
     <script>
         function validarFormulario(event) {
@@ -79,32 +81,34 @@
 
     <!-- Encabezado -->
     <header>
-
-        <div class="logo">
-            <img src="../perfiles/logo_mym.png" alt="Logo de la empresa">
-        </div>
-    <div class="menu-navegacion">
-        <nav>
-            
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./quienessomos.html">Quiénes Somos</a></li>
-                <li class="dropdown">
-                    <a href="#perfiles">   Perfiles Profesionales  </a>
-                    <ul class="submenu">
-                        <li><a href="../perfiles/marlon.html">Lider de proyecto</a></li><br>
-                        <li><a href="../perfiles/isabel.html">Desarrollador FrontEnd</a></li><br>
-                        <li><a href="../perfiles/Kevin.html">Desarrollador BackEnd</a></li><br>
-                        <li><a href="../perfiles/belsi.html">Desarrollador BackEnd</a></li><br>
-                        <li><a href="../perfiles/maria.html">Tester</a></li><br>
+        <div class="wrapper">
+            <nav>
+                <a class="logo" href="../index.html">
+                    <img class="logo-img" src="../img/logo_mym.png" alt="Logo de la empresa">
+                </a>
+                <input type="checkbox" name="" id="toggle">
+                <label for="toggle"><i class="material-icons">menu</i></label>
+                <div class="menu">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./quienessomos.html">Quiénes Somos</a></li>
+                        <li class="dropdown">
+                            <a href="#perfiles">   Perfiles Profesionales  </a>
+                            <ul class="submenu">
+                                <li><a href="../perfiles/marlon.html">Lider de proyecto</a></li><br>
+                                <li><a href="../perfiles/isabel.html">Desarrollador FrontEnd</a></li><br>
+                                <li><a href="../perfiles/Kevin.html">Desarrollador BackEnd</a></li><br>
+                                <li><a href="../perfiles/belsi.html">Desarrollador BackEnd</a></li><br>
+                                <li><a href="../perfiles/maria.html">Tester</a></li><br>
+                            </ul>
+                        </li>
+                        <li><a href="./contacto.html">Contáctenos</a></li>
                     </ul>
-                </li>
-                <li><a href="./contacto.html">Contáctenos</a></li>
-            </ul>
-        </nav>
-    </div>
-
-</header>
+                </div>
+            </nav>
+        </div>
+        
+    </header>
 
     <!-- Contenedor de contacto -->
     <div class="contenedor_contacto">

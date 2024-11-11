@@ -1,7 +1,6 @@
 *,
 *::before,
 *::after {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -39,6 +38,9 @@ body {
     display: flex;
     gap: 2rem;
     margin: 20px;
+    right: 50px;
+    position: relative;
+    
   }
   nav a {
     text-decoration: none;
@@ -47,6 +49,9 @@ body {
   nav #toggle,
   nav label {
     display: none;
+  }
+  .menu {
+    margin: 20px;
   }
   
   
@@ -58,6 +63,7 @@ body {
   
   /* Imagen del logo */
   .logo-img {
+    margin: 20px;
     max-width: 100%;  /* Esto asegura que la imagen no se desborde */
     height: auto; /* Mantiene la proporción de la imagen */
     width: 300px; /* Establece un tamaño predeterminado, ajusta según sea necesario */
@@ -89,6 +95,7 @@ body {
   ul.menu li {
     position: relative;
     display: flex;
+    
   }
   li:hover .submenu {
     display: block;
@@ -104,6 +111,7 @@ body {
     border-radius: 50%;
     background-color: rgba(7, 7, 163, 0.852);
     color: #ffffff;
+    left: 50px;
   }
   .login-button:hover {
     background-color: #7b0e0e; /* Color de fondo cuando se pasa el ratón */
@@ -114,6 +122,7 @@ body {
   
   
   @media (max-width:60.625em) {
+
     nav .menu {
       width: 100%;
       height: 0;
@@ -134,12 +143,15 @@ body {
       height: 100%;
     }
     .logo-img {
-      max-width: 60%;  /* Esto asegura que la imagen no se desborde */
-  
+      max-width: 50%;  /* Esto asegura que la imagen no se desborde */
     }
     ul.submenu {
       top: 30%;
       left: 20%;
+    }
+    .material-icons {
+    right: 50px;
+    position: absolute;
     }
   }
 }
@@ -303,10 +315,10 @@ body {
         .contenedor_contacto {
           color: #000000;
           display: grid;
-          grid-template-columns: 
+          grid-template-columns:
           repeat(
-              auto-fit,    
-              minmax(250px, 1fr) 
+              auto-fit,
+              minmax(250px, 1fr)
           );
           gap:32px;
           align-items: start;
@@ -532,12 +544,12 @@ text-align: center;
 
 @layer paginas_legales {
   .contenido, .sobrenosotros {
-    padding: 50px;
     max-width: 100000px;
-    margin: 0 auto;
-    margin-top: -50px;
+    margin: 20px;
     text-align: justify;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .contenido, .sobrenosotros h1{
   text-align: center;
@@ -553,7 +565,6 @@ h2 {
     color: #121111;
     margin-bottom: 10px;
     text-align: center;
-   
 }
 }
 
