@@ -454,14 +454,10 @@ body {
 
 @layer quienes_somos {
 
-  body {
-    margin: 0;
-    background-color: #e9e8eb;
-}
+
   
 .contenido, .sobrenosotros {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding: 50px;
   max-width: 100000px;
   margin: 0 auto;
 }
@@ -497,7 +493,6 @@ position: relative;
 
 h2 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #333;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -505,33 +500,47 @@ h2 {
 
 .objetivos{
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-background-color: rgb(45, 24, 51);
+background-color: rgb(76, 76, 77);
 color:rgb(252, 252, 252);
-padding: 3em 0;
+display: flow-root;
 }
-.objetivos h2{
+.objetivos h3{
 text-align:center;
-font-size: 2em;
-margin-bottom: 1.5em;
+font-size: 2.2em;
 color: #e9e8eb;
 font-family:sans-serif;
-
+gap: 2em;
+margin-top: 50px;
+background-color:rgb(129, 26, 26);
+border-radius: 15px;
 }
 .lista_objetivos {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 display: flex;
 justify-content: center;
-gap: 10em;
+gap: 2em;
 flex-wrap: wrap;
+display: flex;
+align-items: center;
 }
 
-.lista_objetivos div{
-background-color: rgb(80, 43, 79);
-padding: 1.5em;
+.lista_objetivos_div{
+background-color:rgb(129, 26, 26);
 border-radius:20px ;
 width:240px ;
 height: 210px;
 text-align: center;
+display: flex;
+justify-content: center;
+margin-bottom: 30px;
+}
+
+.lista_objetivos_div p {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 }
 @media (max-width: 1000px) {
 
@@ -542,6 +551,9 @@ text-align: center;
   .vision img {
     width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
     max-height: 250px;
+  }
+  .objetivos h3 {
+    font-size: 2em;
   }
 }
 @media (max-width: 768px) {
@@ -560,6 +572,9 @@ text-align: center;
     width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
     max-height: 200px;
   }
+  .objetivos h3 {
+    font-size: 1.8em;
+  }
 }
 @media (max-width: 480px) {
   .mision {
@@ -575,11 +590,14 @@ text-align: center;
     justify-content: center;
   }
   .vision img {
-    width: auto - 10%; /* Ajusta el ancho a un 80% en pantallas medianas */
+    width: auto -10%; /* Ajusta el ancho a un 80% en pantallas medianas */
     max-height: 150px;
   }
+  .objetivos h3 {
+    font-size: 1.5em;
+  }
 }
-}
+
 @layer paginas_legales {
   .contenido, .sobrenosotros {
     max-width: 100000px;
