@@ -1,178 +1,192 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/ico/logo_mym.ico" type="image/x-icon">
     <title>Portafolio - Kevin Camilo Gelvez León</title>
     <script src="../scripts/dark_mode.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos generales */
+/* Estilos generales */
         body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-            
+            font-family: Arial, sans-serif;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
         @layer header {
-            header {
-        background-color: #e9e8eb;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        .wrapper {
+            width: 100%;
+            max-width: 1800px;
         }
-
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: hsl(232, 100%, 13%);
+            border-radius: 0.4rem;
+        }
+        nav .logo {
+            font-weight: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 20px;
+            right: 50px;
+            position: relative;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+        nav #toggle,
+        nav label {
+            display: none;
+        }
         .menu {
-        height: 55px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: rgba(7, 7, 163, 0.852);
-        padding: 10px 20px;
-        color: white;
-        border-radius: 60px;
-        }
-
+            margin: 20px;
+            }
+        /* Contenedor del logo */
         .logo {
-        align-items: center;
-        margin: 0;
-        display: flex;
-        align-content: center;
-        justify-content: center;
+            display: inline-block; /* Hace que el logo se alinee con el resto del contenido de navegación */
         }
-
-        .logo img {
-        width: 400px;
-        margin: 0;
+        /* Imagen del logo */
+        .logo-img {
+            margin: 20px;
+            max-width: 100%;  /* Esto asegura que la imagen no se desborde */
+            height: auto; /* Mantiene la proporción de la imagen */
+            width: 250px; /* Establece un tamaño predeterminado, ajusta según sea necesario */
+            transition: transform 0.3s ease; /* Añade un efecto suave al pasar el ratón */
         }
-
-        nav {
-        display: flex;
-        flex-wrap: wrap; /* Permite que el nav se ajuste en pantallas pequeñas */
-        align-items: left;
-        justify-content: space-between;
-        padding: 0 20px;
+        .logo-img:hover {
+            transform: scale(1.1); /* Agranda la imagen al pasar el ratón */
         }
-
-        nav ul {
-        display: flex;
-        padding: 0 20px;
-        align-items: flex-start;
-        justify-content: space-between;
-        }
-
-        nav ul li {
-        margin-left: 20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 150%;
-        }
-
-        nav ul li a {
-        color: white;
-        text-decoration: none;
-        }
-
         ul li a:hover {
-        text-decoration: underline;
-        border-radius: 10%;
-        background-color: rgb(3, 3, 42);
+            text-decoration: underline;
+            border-radius: 10%;
+            background-color: rgb(3, 3, 42);
         }
-
         ul.submenu {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 40%;
-        position: absolute;
-        left: 0;
-        top: 100%;
-        background-color: #c30808;
-        display: none;
-        flex-direction: column;
-        list-style: none;
-        padding: 0;
-        z-index: 1;
-        width: 250px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 80%;
+            position: absolute;
+            align-self: start;
+            background-color: #af3232;
+            display: none;
+            list-style: none;
+            z-index: 1;
+            width: 150px;
+            border-radius: 5px;
+            left: 40%;
+            top: -6px;
         }
-
+            
         ul.menu li {
-        position: relative;
-        display: flex;
+            position: relative;
+            display: flex;
         }
-
-        ul.menu li:hover .submenu {
-        display: block;
+        li:hover .submenu {
+            display: block;
         }
-
         ul.submenu li a {
-        padding: 10px 15px;
-        display: flex;
-        flex-direction: column;
-
+            padding: 10px 15px;
+            display: flex;
+            flex-direction: column;
         }
-
-        div.titulo h1 {
-        display: flex;
+        .login-button {
+            width: 60px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(7, 7, 163, 0.852);
+            color: #ffffff;
+            left: 50px;
         }
-
-        /* Media Queries para Responsive Design */
-        @media (max-width: 1000px) {
-        nav {
-            flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-            align-items: flex-start; /* Alinear a la izquierda */
+        .login-button:hover {
+            background-color: #7b0e0e; /* Color de fondo cuando se pasa el ratón */
+            color: #000000;
+            transform: scale(1.1); /* Aumenta el tamaño del botón en hover */
         }
-
-        nav ul {
-            flex-direction: column; /* Apilar los elementos de la lista */
+            
+        @media (max-width:65.625em) {
+            nav .menu {
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                position: relative;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                margin: 0px;
+                right: 0px;
+            }
+            nav label {
+                align-items: center;
+                display: inline-flex;
+                color: white;
+                cursor: pointer;
+            }
+            nav #toggle:checked ~ .menu {
+                height: 100%;
+            }
+            .logo-img {
+                max-width: 80%;  /* Esto asegura que la imagen no se desborde */
+            }
+            ul.submenu {
+                align-items: center;
+            }
+            .material-icons {
+                right: 50px;
+                position: absolute;
+            }
+            .login-button {
+                margin: 20px;
+            }
         }
-
-        nav ul li {
-            margin-left: 0; /* Eliminar margen lateral */
-            margin-bottom: 10px; /* Añadir espacio entre elementos */
-        }
-
-        .logo img {
-            width: 250px; /* Ajustar el tamaño de la imagen */
-        }
-
-        nav ul li a {
-            font-size: 120%; /* Ajustar el tamaño de fuente */
-        }
-        }
-        /* Media Queries para Responsive Design */
-        @media (max-width: 768px) {
-        nav {
-            flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-            align-items: flex-start; /* Alinear a la izquierda */
-        }
-        
-        nav ul {
-            flex-direction: column; /* Apilar los elementos de la lista */
-        }
-        
-        nav ul li {
-            margin-left: 0; /* Eliminar margen lateral */
-            margin-bottom: 10px; /* Añadir espacio entre elementos */
-        }
-
-        .logo img {
-            width: 150px; /* Ajustar el tamaño de la imagen */
-        }
-
-        nav ul li a {
-            font-size: 120%; /* Ajustar el tamaño de fuente */
-        }
-        }
-
-        @media (max-width: 480px) {
-        nav ul li {
-            font-size: 100%; /* Más pequeño en pantallas muy pequeñas */
-        }
-
-        nav ul li a {
-            padding: 8px 10px; /* Reducir el padding */
-        }
+        @media (max-width:25.625em) {
+            nav .menu {
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                position: relative;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                margin: 0px;
+                right: 0px;
+            }
+            nav label {
+                align-items: center;
+                display: inline-flex;
+                color: white;
+                cursor: pointer;
+            }
+            nav #toggle:checked ~ .menu {
+                height: 100%;
+                flex-wrap: wrap;
+            }
+            .logo {
+                display: contents;
+            }
+            .logo-img {
+                max-width: 40%;  /* Esto asegura que la imagen no se desborde */
+            }
+            ul.submenu {
+                align-items: center;
+            }
+            .material-icons {
+                position: absolute;
+            }
+            .login-button {
+                margin: 20px;
+            }
         }
         }
 
@@ -336,33 +350,34 @@
 <body>
 
     <header>
-
-        <div class="logo">
-            <img src="./logo_mym.png" alt="Logo de la empresa">
-        </div>
-        <div class="menu-navegacion">
-            <nav>      
-                <ul class="menu">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../nav/quienessomos.html">Quiénes Somos</a></li>
-                    <li class="dropdown">
-                        <a href="#perfiles">   Perfiles Profesionales  </a>
-                        <ul class="submenu">
-                            <li><a href="./marlon.html">Lider de proyecto</a></li><br>
-                            <li><a href="./isabel.html">Desarrollador FrontEnd</a></li><br>
-                            <li><a href="./Kevin.html">Desarrollador BackEnd</a></li><br>
-                            <li><a href="./belsi.html">Desarrollador BackEnd</a></li><br>
-                            <li><a href="./maria.html">Tester</a></li><br>
-                        </ul>
-                    </li>
-                    <li><a href="../nav/contacto.html">Contáctenos</a></li>
-                </ul>
+        <div class="wrapper">
+            <nav>
+                <a class="logo" href="../index.html">
+                    <img class="logo-img" src="../img/logo_mym.png" alt="Logo de la empresa">
+                </a>
+                <input type="checkbox" name="" id="toggle">
+                <label for="toggle"><i class="material-icons">menu</i></label>
+                <div class="menu">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../nav/quienessomos.html">Quiénes Somos</a></li>
+                        <li class="dropdown">
+                            <a href="#perfiles">   Perfiles Profesionales  </a>
+                            <ul class="submenu">
+                                <li><a href="./marlon.html">Lider de proyecto</a></li><br>
+                                <li><a href="./isabel.html">Desarrollador FrontEnd</a></li><br>
+                                <li><a href="./Kevin.html">Desarrollador BackEnd</a></li><br>
+                                <li><a href="./belsi.html">Desarrollador BackEnd</a></li><br>
+                                <li><a href="./maria.html">Tester</a></li><br>
+                            </ul>
+                        </li>
+                        <li><a href="../nav/contacto.html">Contáctenos</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
-    
-
-</header>
-
+        
+    </header>
 
     <!-- Encabezado con un fondo degradado -->
 
