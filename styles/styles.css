@@ -465,50 +465,44 @@ body {
   max-width: 100000px;
   margin: 0 auto;
 }
-.misión img{
+.mision {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 30px;
+  display: flex;
+  text-align: justify;
+}
+.mision img{
 height: 280px;
-width: 330px;
+width: auto;
 margin-right: 5px;
 margin-inline: 20px;
 display: flex;
 position: relative;
-top: -80px;
 }
 
-.visión img{
+.vision{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  text-align: justify;
+}
+.vision img{
   height: 300px;
   width: 300px;
   margin-right: 90px;
   margin-inline: 35px;
   display: flex;
   position: relative;
-  top: -140px;
 
 }
-
-.visión{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-bottom: -140px;
-  display: flex;
-  text-align: justify;
-}
-
-
 
 h2 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #333;
   margin-bottom: 10px;
   text-align: center;
- 
 }
 
-.misión {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-bottom: 30px;
-  display: flex;
-  text-align: justify;
-}
+
 .objetivos{
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 background-color: rgb(45, 24, 51);
@@ -539,9 +533,53 @@ width:240px ;
 height: 210px;
 text-align: center;
 }
+@media (max-width: 1000px) {
 
+  .mision img {
+    width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
+    max-height: 200px;
+  }
+  .vision img {
+    width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
+    max-height: 250px;
+  }
 }
-
+@media (max-width: 768px) {
+  .mision {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mision img {
+    width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
+    max-height: 120px;
+  }.vision {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .vision img {
+    width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
+    max-height: 200px;
+  }
+}
+@media (max-width: 480px) {
+  .mision {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mision img {
+    width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
+    max-height: 90px;
+  }
+  .vision {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .vision img {
+    width: auto - 10%; /* Ajusta el ancho a un 80% en pantallas medianas */
+    max-height: 150px;
+  }
+}
+}
 @layer paginas_legales {
   .contenido, .sobrenosotros {
     max-width: 100000px;
@@ -550,22 +588,22 @@ text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-.contenido, .sobrenosotros h1{
-  text-align: center;
-}
-.contenido h1{
-  text-align: center;
-  margin-top: 20px;
-}
-.contenido p{
-  text-align: justify;
-}
-h2 {
+  }
+  .contenido, .sobrenosotros h1{
+    text-align: center;
+  }
+  .contenido h1{
+    text-align: center;
+    margin-top: 20px;
+  }
+  .contenido p{
+    text-align: justify;
+  }
+  h2 {
     color: #121111;
     margin-bottom: 10px;
     text-align: center;
-}
+  }
 }
 
 @layer footer {
