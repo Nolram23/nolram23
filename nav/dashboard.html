@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/ico/logo_mym.ico" type="image/x-icon">
+    <title>Motores & Motobombas</title>
+    <script src="../scripts/dark_mode.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+    <div class="wrapper">
+        <nav>
+            <a class="logo" href="../index.html">
+                <img class="logo-img" src="../img/logo_mym.png" alt="Logo de la empresa">
+            </a>
+            <input type="checkbox" name="" id="toggle">
+            <label for="toggle"><i class="material-icons">menu</i></label>
+            <div class="menu">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./quienessomos.html">Quiénes Somos</a></li>
+                    <li class="dropdown">
+                        <a href="#perfiles">   Perfiles Profesionales  </a>
+                        <ul class="submenu">
+                            <li><a href="../perfiles/marlon.html">Lider de proyecto</a></li><br>
+                            <li><a href="../perfiles/isabel.html">Desarrollador FrontEnd</a></li><br>
+                            <li><a href="../perfiles/Kevin.html">Desarrollador BackEnd</a></li><br>
+                            <li><a href="../perfiles/belsi.html">Desarrollador BackEnd</a></li><br>
+                            <li><a href="../perfiles/maria.html">Tester</a></li><br>
+                        </ul>
+                    </li>
+                    <li><a href="./contacto.html">Contáctenos</a></li>
+                    <li><button onclick="Cerrar()" class="Close-button">Cerrar Sesion</button></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <script>
+        // Función que redirige al otro archivo HTML
+        function Cerrar() {
+            window.location.href = "./login.html"; 
+        }
+    </script>
+</header>
+
+<section class="Graficas">
+    <h3>Estadísticas por país</h3>
+    <div class="barras">
+        <img src="../img/graph/grafica1.jpg" alt="Graficas de barras">
+        <img src="../img/graph/grafica2.jpg" alt="Graficas de barras">
+    </div>
+    <br>
+    <h3>Estadísticas de metodos de pago </h3>
+    <div class="histogramas">
+        <img src="../img/graph/grafica3.jpg" alt="Graficas de barras">
+        <img src="../img/graph/grafica4.jpg" alt="Graficas de barras">
+    </div>
+    <br>
+    <h3>Estadísticas de productos</h3>
+    <div class="lineales">
+        <img src="../img/graph/grafica5.jpg" alt="Graficas de barras">
+        <img src="../img/graph/grafica6.jpg" alt="Graficas de barras">
+    </div>
+
+
+<!--espacio para realizar el footer-->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Enlaces</h4>
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="./servicios.html">Servicios</a></li>
+              <li><a href="./contacto.html">Contacto</a></li>
+              <li><a href="./politicasdeprivacidad.html">Politicas de privacidad</a></li>
+              <li><a href="./descargodereponsabilidades.html">Descargo de responsabilidad</a></li>                
+              <li><a href="./copyright.html">Copyright</a></li>
+              <li><a href="./terminosycondiciones.html">Terminos y Condiciones</a></li>
+          </ul>
+          </div>
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <a>motoresymotobombas@hotmail.com</a> 
+          <br>
+          <a>+57 311 847 3871</a>
+          <br>
+          <a>+57 607 5790440</a>
+        </div>
+        <div class="footer-section">
+            <h4>Redes Sociales</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1DpzL6usAu/" class="social-icon" target="_blank">FB</a>
+                <a href="https://www.instagram.com/mymcucuta?igsh=eWVoZ2c3ZHF6YW1z" class="social-icon" target="_blank">IG</a>
+                <a href="mailto:motoresymotobombas@hotmail.com" class="social-icon" target="_blank">@</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a>&copy; 2024 Motores y Motobombas. Todos los derechos reservados.</a>
+    </div>
+    <button id="boton-fijo">Cambia el modo de iluminacion</button>
+
+  </footer>
+  </body>
+  </html>
