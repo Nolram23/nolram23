@@ -196,7 +196,7 @@ body {
   .carousel-container {
     position: relative;
     width: 100%;
-    max-height: 200px;
+    max-height: 300px;
     max-width: 1800px;
     margin: auto;
     overflow: hidden;
@@ -210,7 +210,7 @@ body {
   
   .carousel img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     max-width: 100%;
     transition: opacity 0.5s ease;
   }
@@ -626,6 +626,228 @@ body {
       font-size: 1.5em;
     }
   }
+}
+
+@layer csa_karcher {
+  .csa-content {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .csa-politicas {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .csa-politicas-p{
+    display: grid;
+    flex-wrap: wrap;
+  }
+  .csa-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin: 80px;
+    text-decoration: none;
+    font-size: x-large;
+    background: border-box;
+  }
+  .objetivos{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(76, 76, 77);
+    color:rgb(252, 252, 252);
+    display: flow-root;
+  }
+  .objetivos h3{
+    text-align:center;
+    font-size: 2.2em;
+    color: #e9e8eb;
+    font-family:sans-serif;
+    gap: 2em;
+    margin-top: 50px;
+    background-color:rgb(129, 26, 26);
+    border-radius: 15px;
+  }
+  .lista_objetivos {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+  }
+  .lista_objetivos_div{
+    background-color:rgb(129, 26, 26);
+    border-radius:20px ;
+    width:240px ;
+    height: 210px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .lista_objetivos_div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    @media (max-width: 1000px) {
+
+    .mision img {
+      width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
+      max-height: 200px;
+    }
+    .vision img {
+      width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
+      max-height: 250px;
+    }
+    .objetivos h3 {
+      font-size: 2em;
+    }
+  }
+  @media (max-width: 768px) {
+    .mision {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .mision img {
+      width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
+      max-height: 120px;
+    }.vision {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .vision img {
+      width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
+      max-height: 200px;
+    }
+    .objetivos h3 {
+      font-size: 1.8em;
+    }
+  }
+  @media (max-width: 480px) {
+    .mision {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .mision img {
+      width: auto; /* Ajusta el ancho a un 80% en pantallas medianas */
+      max-height: 90px;
+    }
+    .vision {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .vision img {
+      width: auto -10%; /* Ajusta el ancho a un 80% en pantallas medianas */
+      max-height: 150px;
+    }
+    .objetivos h3 {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@layer notice {
+
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.promociones{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+
+h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #0095d9;
+    font-weight: bold;
+}
+
+/* Estilos para la galería */
+.gallery {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-images {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.gallery-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .img-container {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
 }
 
 @layer paginas_legales {
